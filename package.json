@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@headlessui/react": "2.2.0",
-    "@next/bundle-analyzer": "15.0.2",
+    "@mdx-js/mdx": "^3.1.0",
+    "@next/bundle-analyzer": "^15.1.6",
     "@octokit/graphql": "^8.1.1",
     "@prisma/client": "5.21.0",
     "@tailwindcss/forms": "^0.5.9",
@@ -24,7 +25,7 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "contentlayer2": "0.5.3",
+    "contentlayer": "^0.3.4",
     "esbuild": "0.24.2",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.2",
@@ -33,7 +34,8 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.469.0",
     "next": "15.1.2",
-    "next-contentlayer2": "0.5.3",
+    "next-contentlayer": "^0.3.4",
+    "next-contentlayer2": "^0.5.3",
     "next-themes": "^0.4.4",
     "pliny": "0.2.1",
     "postcss": "^8.4.49",
@@ -56,12 +58,14 @@
     "swr": "^2.3.0",
     "tailwindcss": "^3.4.17",
     "typed.js": "^2.1.0",
-    "unist-util-visit": "^5.0.0"
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0",
+    "vfile": "^6.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.16.0",
-    "@svgr/webpack": "^8.0.1",
+    "@svgr/webpack": "^8.1.0",
     "@types/mdx": "^2.0.12",
     "@types/react": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.12.0",
@@ -86,5 +90,6 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728"
 }
