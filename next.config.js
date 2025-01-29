@@ -1,8 +1,19 @@
-const { withContentlayer } = require('next-contentlayer2');
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // ✅ Включити статичний експорт
+  basePath: process.env.BASE_PATH || '', // ✅ Динамічна підтримка basePath
+  images: {
+    unoptimized: true, // ✅ Вимкнути SSR для зображень
+  },
+};
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+module.exports = nextConfig;
+
+// const { withContentlayer } = require('next-contentlayer');
+
+// const withBundleAnalyzer = require('@next/bundle-analyzer')({
+//   enabled: process.env.ANALYZE === 'true',
+// });
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
@@ -62,7 +73,7 @@ const unoptimized = process.env.UNOPTIMIZED ? true : undefined;
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
 module.exports = () => {
-  const plugins = [withContentlayer, withBundleAnalyzer];
+  const plugins = [2, 2];
   return plugins.reduce((acc, next) => next(acc), {
     output,
     basePath,
